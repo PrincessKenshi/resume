@@ -1,0 +1,127 @@
+body {
+    margin: 0%;
+    background-image: url('https://www.everwallpaper.co.uk/cdn/shop/products/cartoon-cats-wallpaper-mural-plain.jpg?v=1640082595');
+}
+
+.container {
+    padding: 0px;
+    text-align: center;
+}
+
+#hello {
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    box-sizing: border-box;
+    background-color: rgba(30, 121, 114, 0.534);
+}
+
+.header {
+    box-sizing: border-box;
+    padding-bottom: 12px;
+    justify-content: center;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: nowrap;
+    background-color: rgba(133, 48, 48, 0.7);
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(26, 0, 3);
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 3px solid #61c794;
+    border-radius: 125px;
+}
+
+.ps {
+    width: 100%;
+    background-color: #d3ccd4;
+    border-radius: 20px;
+    margin-right: 100px;
+    height: 22px;
+    border: 1px groove #b1a2b3;
+}
+
+
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #3c253f;
+    border-radius: 20px;
+    height: 1px;
+    border: 1px groove #b1a2b3;
+}
+
+.illustrator {
+    width: 85%;
+    background-color: #7bfa9b;
+}
+
+.htmlcss {
+    width: 30%;
+    background-color: rgb(178, 250, 232);
+}
+
+.javascript {
+    width: 5%;
+    background-color: #ff96c2;
+}
+
+.layout {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+    box-sizing: border-box;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+#know {
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgba(29, 87, 72, 0.63);
+}
+
+.info {
+    margin-top: 200px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    justify-content: center;
+    box-sizing: border-box;
+    display: inline-block;
+    flex-shrink: 0;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    background: rgba(44, 128, 11, 0.534);
+    color: black;
+    text-align: center;
+    border: 1px solid;
+    padding: 150px;
+    padding-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.aboutme {
+    text-align: justify;
+}
+
+.education {
+    text-align: justify;
+}
+
+.experience {
+    text-align: justify;
+}
