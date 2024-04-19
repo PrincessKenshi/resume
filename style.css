@@ -8,15 +8,30 @@ body {
     text-align: center;
 }
 
+.line {
+    border: none;
+    height: 2px;
+    background-color: rgb(194, 255, 192);
+}
+
 #hello {
     color: rgb(255, 255, 255);
-    font-family: monospace;
+    font-family: cursive;
+    font-size: 90%;
     box-sizing: border-box;
+    box-shadow: 0 0 12px 4px rgba(17, 23, 112, 0.815);
     background-color: rgba(30, 121, 114, 0.534);
+}
+
+.headerline {
+    border: none;
+    height: 1px;
+    background-color: pink;
 }
 
 .header {
     box-sizing: border-box;
+    box-shadow: 0 0 12px 5px rgb(49, 9, 37);
     padding-bottom: 12px;
     justify-content: center;
     display: flex;
@@ -35,6 +50,17 @@ body {
     text-align: center;
     border: 3px solid #61c794;
     border-radius: 125px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.profile {
+    margin-left: 20px;
+    text-align: justify;
+}
+
+#name {
+    font-family: cursive;
 }
 
 .ps {
@@ -46,6 +72,11 @@ body {
     border: 1px groove #b1a2b3;
 }
 
+#proskils {
+    font-size: 80%;
+    font-weight: bolder;
+    color:rgb(255, 213, 150)
+}
 
 .skills {
     text-align: right;
@@ -55,6 +86,8 @@ body {
     border-radius: 20px;
     height: 1px;
     border: 1px groove #b1a2b3;
+    align-items: left;
+    font-size: 100%;
 }
 
 .illustrator {
@@ -78,14 +111,16 @@ body {
     align-items: center;
     margin-top: 55px;
     box-sizing: border-box;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 
 #know {
     color: rgb(255, 255, 255);
-    font-family: monospace;
+    font-size: 70%;
+    font-family: cursive;
+    box-shadow: 3px 0 12px 4px rgba(17, 23, 112, 0.815);
     border-radius: 20px;
     padding: 5px;
     cursor: pointer;
@@ -98,6 +133,7 @@ body {
     margin-left: 10px;
     justify-content: center;
     box-sizing: border-box;
+    box-shadow: 5px 0 10px 5px rgba(21, 110, 105, 0.829);
     display: inline-block;
     flex-shrink: 0;
     align-items: stretch;
@@ -115,13 +151,53 @@ body {
 }
 
 .aboutme {
+    text-align: center;
+}
+
+#aboutmee {
+    color: rgb(17, 82, 33);
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+#aboutmeinfo {
     text-align: justify;
 }
 
 .education {
+    text-align: center;
+}
+
+#educationn {
+    color: rgb(17, 82, 33);
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+#educationinfo {
     text-align: justify;
 }
 
 .experience {
+    text-align: center;
+}
+
+#experiencee {
+    color: rgb(17, 82, 33);
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+.hobbies {
+    text-align: center;
+}
+
+#hobbiess {
+    color: rgb(17, 82, 33);
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+#hobbiesinfo {
     text-align: justify;
 }
