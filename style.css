@@ -121,7 +121,6 @@ body {
 
 .aboutme {
     text-align: center;
-    font-size: large;
 }
 
 #aboutmee {
@@ -166,6 +165,7 @@ body {
     padding-left: 30px;
     padding-right: 30px;
 }
+
 
 .skils {
     text-align: center;
@@ -268,7 +268,7 @@ body {
 }
 
 #experienceinfo {
-    text-align: justify;
+    text-align: center;
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
@@ -291,7 +291,7 @@ body {
 }
 
 #referenceinfo {
-    text-align: justify;
+    text-align: center;
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
