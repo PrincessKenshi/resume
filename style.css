@@ -64,12 +64,12 @@ body {
 }
 
 .ps {
-    width: 100%;
-    background-color: #d3ccd4;
+    width: 40%;
+    background-color: #4b393e;
     border-radius: 20px;
     margin-right: 100px;
-    height: 22px;
-    border: 1px groove #b1a2b3;
+    height: 20px;
+    border: 1px groove #4d2125;
 }
 
 #proskils {
@@ -85,7 +85,7 @@ body {
     color: #3c253f;
     border-radius: 20px;
     height: 1px;
-    border: 1px groove #b1a2b3;
+    border: 1px groove #4d2125;
     align-items: left;
     font-size: 100%;
 }
@@ -101,7 +101,7 @@ body {
 }
 
 .javascript {
-    width: 5%;
+    width: 15%;
     background-color: #ff96c2;
 }
 
@@ -141,7 +141,7 @@ body {
     position: relative;
     margin-right: 10px;
     flex-wrap: wrap;
-    background: rgba(44, 128, 11, 0.534);
+    background: rgba(44, 128, 11, 0.603);
     color: black;
     text-align: center;
     border: 1px solid;
@@ -152,6 +152,7 @@ body {
 
 .aboutme {
     text-align: center;
+    font-size: large;
 }
 
 #aboutmee {
@@ -162,6 +163,16 @@ body {
 
 #aboutmeinfo {
     text-align: justify;
+    box-sizing: border-box;
+    background: rgba(252, 250, 163, 0.623);
+    border: 1px solid rgb(194, 255, 192);
+    padding: 20px;
+}
+
+#infoline {
+    border: none;
+    height: 2px;
+    background-color: rgb(240, 0, 0);
 }
 
 .education {
@@ -176,6 +187,10 @@ body {
 
 #educationinfo {
     text-align: justify;
+    box-sizing: border-box;
+    background: rgba(252, 250, 163, 0.623);
+    border: 1px solid rgb(194, 255, 192);
+    padding: 20px;
 }
 
 .experience {
@@ -186,6 +201,14 @@ body {
     color: rgb(17, 82, 33);
     font-weight: bolder;
     font-family: cursive;
+}
+
+#experienceinfo {
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(252, 250, 163, 0.623);
+    border: 1px solid rgb(194, 255, 192);
+    padding: 20px;
 }
 
 .hobbies {
@@ -200,4 +223,8 @@ body {
 
 #hobbiesinfo {
     text-align: justify;
+    box-sizing: border-box;
+    background: rgba(252, 250, 163, 0.623);
+    border: 1px solid rgb(194, 255, 192);
+    padding: 20px;
 }
