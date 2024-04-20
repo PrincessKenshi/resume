@@ -1,6 +1,6 @@
 body {
     margin: 0%;
-    background-image: url('https://www.everwallpaper.co.uk/cdn/shop/products/cartoon-cats-wallpaper-mural-plain.jpg?v=1640082595');
+    background-color: rgba(178, 250, 232, 0.603);
 }
 
 .container {
@@ -8,74 +8,196 @@ body {
     text-align: center;
 }
 
-.line {
-    border: none;
-    height: 2px;
-    background-color: rgb(194, 255, 192);
+.bgimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(1.7px);
+    z-index: -1; 
+    background-image: url('https://www.everwallpaper.co.uk/cdn/shop/products/cartoon-cats-wallpaper-mural-plain.jpg?v=1640082595');
 }
 
-#hello {
-    color: rgb(255, 255, 255);
-    font-family: cursive;
-    font-size: 90%;
-    box-sizing: border-box;
-    box-shadow: 0 0 12px 4px rgba(17, 23, 112, 0.815);
-    background-color: rgba(30, 121, 114, 0.534);
-}
-
-.headerline {
-    border: none;
-    height: 1px;
-    background-color: pink;
+.header img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 200px;
+    margin-top: 20px;
+    top: 10px;
 }
 
 .header {
+    margin-top: 150px;
+    margin-bottom: 200px;
+    justify-content: center;
     box-sizing: border-box;
-    box-shadow: 0 0 12px 5px rgb(49, 9, 37);
-    padding-bottom: 12px;
+    box-shadow: 5px 0 10px 5px rgba(21, 110, 105, 0.829);
+    display: inline-block;
+    flex-shrink: 0;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    background: rgba(180, 248, 153, 0.842);
+    color: rgb(69, 218, 89);
+    text-shadow: 4px 2px rgb(11, 65, 34);
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid;
+    padding: 1px;
+    font-family: cursive;
+}
+
+.hello {
+    font-size: 200%;
+}
+
+.click {
+    font-size: 150%;
+    font-family: monospace;
+    color:rgba(3, 99, 19, 0.829);
+    text-shadow: 2px 2px rgba(206, 224, 44, 0.74);
+}
+
+.header:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+}
+
+
+
+.info {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 5px 0 10px 5px rgba(21, 110, 105, 0.829);
+    display: inline-block;
+    flex-shrink: 0;
+    align-items: stretch;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    background: rgb(194, 255, 192);
+    color: black;
+    text-align: center;
+    border: 1px solid;
+    padding-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile img {
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    border: 2px solid rgb(80, 13, 51);
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.profile {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: justify;
     justify-content: center;
     display: flex;
     align-items: stretch;
     flex-direction: row;
     position: relative;
     flex-wrap: nowrap;
-    background-color: rgba(133, 48, 48, 0.7);
-    font-family: 'Courier New', Courier, monospace;
-    color:rgb(26, 0, 3);
-}
-
-.header img {
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    border: 3px solid #61c794;
-    border-radius: 125px;
-    margin-top: 50px;
-    margin-right: 50px;
-}
-
-.profile {
-    margin-left: 20px;
-    text-align: justify;
 }
 
 #name {
+    margin-top: 70px;
+}
+
+.aboutme {
+    text-align: center;
+    font-size: large;
+}
+
+#aboutmee {
+    color:  rgb(17, 82, 33);
+    text-shadow: 3px 4px rgba(255, 254, 183, 0.815);
+    font-weight: bolder;
     font-family: cursive;
+    background: rgba(179, 224, 119, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#aboutmeinfo {
+    text-align: justify;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.hobbies {
+    text-align: center;
+}
+
+#hobbiess {
+    color:  rgb(17, 82, 33);
+    text-shadow: 3px 4px rgba(255, 254, 183, 0.815);
+    font-weight: bolder;
+    font-family: cursive;
+    background: rgba(179, 224, 119, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#hobbiesinfo {
+    text-align: justify;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.skils {
+    text-align: center;
+}
+
+#profskils {
+    color:  rgb(17, 82, 33);
+    text-shadow: 3px 4px rgba(255, 254, 183, 0.815);
+    font-weight: bolder;
+    font-family: cursive;
+    background: rgba(179, 224, 119, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
 
 .ps {
     width: 40%;
-    background-color: #4b393e;
+    background-color: #739479;
     border-radius: 20px;
     margin-right: 100px;
     height: 20px;
-    border: 1px groove #4d2125;
+    border: 1px groove #1d5c35;
 }
 
 #proskils {
-    font-size: 80%;
-    font-weight: bolder;
-    color:rgb(255, 213, 150)
+    text-align: justify;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    
 }
 
 .skills {
@@ -85,7 +207,7 @@ body {
     color: #3c253f;
     border-radius: 20px;
     height: 1px;
-    border: 1px groove #4d2125;
+    border: 1px groove #1d5c35;
     align-items: left;
     font-size: 100%;
 }
@@ -105,92 +227,28 @@ body {
     background-color: #ff96c2;
 }
 
-.layout {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    margin-top: 55px;
-    box-sizing: border-box;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-
-#know {
-    color: rgb(255, 255, 255);
-    font-size: 70%;
-    font-family: cursive;
-    box-shadow: 3px 0 12px 4px rgba(17, 23, 112, 0.815);
-    border-radius: 20px;
-    padding: 5px;
-    cursor: pointer;
-    background-color: rgba(29, 87, 72, 0.63);
-}
-
-.info {
-    margin-top: 200px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    justify-content: center;
-    box-sizing: border-box;
-    box-shadow: 5px 0 10px 5px rgba(21, 110, 105, 0.829);
-    display: inline-block;
-    flex-shrink: 0;
-    align-items: stretch;
-    flex-direction: row;
-    position: relative;
-    margin-right: 10px;
-    flex-wrap: wrap;
-    background: rgba(44, 128, 11, 0.603);
-    color: black;
-    text-align: center;
-    border: 1px solid;
-    padding: 150px;
-    padding-top: 15px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.aboutme {
-    text-align: center;
-    font-size: large;
-}
-
-#aboutmee {
-    color: rgb(17, 82, 33);
-    font-weight: bolder;
-    font-family: cursive;
-}
-
-#aboutmeinfo {
-    text-align: justify;
-    box-sizing: border-box;
-    background: rgba(252, 250, 163, 0.623);
-    border: 1px solid rgb(194, 255, 192);
-    padding: 20px;
-}
-
-#infoline {
-    border: none;
-    height: 2px;
-    background-color: rgb(240, 0, 0);
-}
 
 .education {
     text-align: center;
 }
 
 #educationn {
-    color: rgb(17, 82, 33);
+    color:  rgb(17, 82, 33);
+    text-shadow: 3px 4px rgba(255, 254, 183, 0.815);
     font-weight: bolder;
     font-family: cursive;
+    background: rgba(179, 224, 119, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
 
 #educationinfo {
     text-align: justify;
     box-sizing: border-box;
-    background: rgba(252, 250, 163, 0.623);
-    border: 1px solid rgb(194, 255, 192);
-    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .experience {
@@ -198,33 +256,43 @@ body {
 }
 
 #experiencee {
-    color: rgb(17, 82, 33);
+    color:  rgb(17, 82, 33);
+    text-shadow: 3px 4px rgba(255, 254, 183, 0.815);
     font-weight: bolder;
     font-family: cursive;
+    background: rgba(179, 224, 119, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
 
 #experienceinfo {
-    text-align: center;
-    box-sizing: border-box;
-    background: rgba(252, 250, 163, 0.623);
-    border: 1px solid rgb(194, 255, 192);
-    padding: 20px;
-}
-
-.hobbies {
-    text-align: center;
-}
-
-#hobbiess {
-    color: rgb(17, 82, 33);
-    font-weight: bolder;
-    font-family: cursive;
-}
-
-#hobbiesinfo {
     text-align: justify;
     box-sizing: border-box;
-    background: rgba(252, 250, 163, 0.623);
-    border: 1px solid rgb(194, 255, 192);
-    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.reference {
+    text-align: center;
+}
+
+#referencee {
+    color:  rgb(17, 82, 33);
+    text-shadow: 3px 4px rgba(255, 254, 183, 0.815);
+    font-weight: bolder;
+    font-family: cursive;
+    background: rgba(179, 224, 119, 0.623);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#referenceinfo {
+    text-align: justify;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
 }
