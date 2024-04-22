@@ -98,7 +98,7 @@ body {
     text-align: center;
     border: 2px solid rgb(80, 13, 51);
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-right: 50px;
 }
 
@@ -113,6 +113,20 @@ body {
     flex-direction: row;
     position: relative;
     flex-wrap: nowrap;
+}
+
+.informational {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+.informational h4 {
+    flex-basis: calc(50% - 10px);
+    margin: 3px 5px;
 }
 
 #name {
@@ -140,8 +154,12 @@ body {
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
+    margin: 0 auto;
 }
 
+#aboutmeinfo h3 {
+    margin: 0;
+}
 
 .hobbies {
     text-align: center;
