@@ -8,3 +8,4 @@ document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: infoOffset, behavior: 'smooth' });
     });
 });
+
