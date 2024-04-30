@@ -3,103 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            margin-bottom: 10px;
-        }
-        ul {
-            margin-top: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Kenshi's Resume</title>
 </head>
 <body>
+    <div class="container">
+        <div class="bgimage"></div>
+        <div class="header">
+            <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/336648301_873752613730450_320881333241351639_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHOtyirn024oKdxXd-_hmloPQJxbH9g4sM9AnFsf2Diw1xrhZHadgdRGf091QrdmqUTa3S8aChHsAgKktRqdI-7&_nc_ohc=BP4s9RXEejUAb7GKmUa&_nc_ht=scontent-mnl1-1.xx&oh=00_AfCWIfdumqzGLjjMHc6xJqtBb6emXQGY1yIf0rhBycB19g&oe=66298123" alt="EwE">
+            <h1 class="hello">Hello Everyone! Welcome To my CuriviTAE</h1>
+            <h3 class="click">Click me!</h3>
+        </div>
 
-<h1>Personal Information</h1>
-<p id="name">Name:</p>
-<p id="birthdate">Birthday:</p>
-<p id="gender">Gender:</p>
-<p id="age">Age:</p>
-<p id="address">Address:</p>
-<p id="phoneNumber">Contact Number:</p>
-<p id="email">Email:</p>
-
-<h1>Skills</h1>
-<ul id="skills"></ul>
-
-
-<h1>Education</h1>
-<h2 id="school"></h2>
-<p id="level"></p>
-<p id="year"></p>
-<p id="educationAddress"></p>
-
-
-<h1>Experience</h1>
-<p id="experience"></p>
-
-<h1>Awards</h1>
-<ul id="awards"></ul>
-
-<h1>Reference</h1>
-<ul id="references"></ul>
+        <div class="layout">
+            <div class="info">
+                <div class="profile">
+                    <img src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/336648301_873752613730450_320881333241351639_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHOtyirn024oKdxXd-_hmloPQJxbH9g4sM9AnFsf2Diw1xrhZHadgdRGf091QrdmqUTa3S8aChHsAgKktRqdI-7&_nc_ohc=BP4s9RXEejUAb7GKmUa&_nc_ht=scontent-mnl1-1.xx&oh=00_AfCWIfdumqzGLjjMHc6xJqtBb6emXQGY1yIf0rhBycB19g&oe=66298123" alt="EwE">
+                    
+                        <h1 id="name">Name:</h1>
+                        
+                    <div class="information">
+                        <p id="birthdate">Birthday:</p>
+                        <p id="gender">Gender:</p>
+                        <p id="age">Age:</p>
+                        <p id="address">Address:</p>
+                        <p id="phoneNumber">Contact Number:</p>
+                        <p id="email">Email:</p>
+                    </div>
+                </div>
 
 
+                <h1 id="aboutmee">About Me</h1>
+                <div id="aboutmeinfo">
+                    <p id="aboutme"></p>
+                </div>
 
-<script>
-    fetch('https://noderesume.onrender.com/')
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('name').innerText = data.personalInfo.name;
-        document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
-        document.getElementById('gender').innerText = data.personalInfo.gender;
-        document.getElementById('age').innerText = data.personalInfo.age;
-        document.getElementById('address').innerText = data.personalInfo.address;
-        document.getElementById('phoneNumber').innerText = data.personalInfo.phoneNumber;
-        document.getElementById('email').innerText = data.personalInfo.email;
 
-        const skillsList = document.getElementById('skills');
-        data.skills.forEach(skill => {
-            const li = document.createElement('li');
-            li.innerText = skill;
-            skillsList.appendChild(li);
-        });
+                <h1 id="profskils">Skills</h1>
+                <div id="proskils">
+                    <ul id="skills"></ul>
+                </div>
 
-        document.getElementById('school').innerText = data.education[0].school; // Accessing the first item in the education array
-        document.getElementById('level').innerText = data.education[0].level;
-        document.getElementById('year').innerText = data.education[0].year;
-        document.getElementById('educationAddress').innerText = data.education[0].address;
 
-        const experienceList = document.getElementById('experience');
-        data.experience.forEach(exp => {
-            const li = document.createElement('li');
-            li.innerText = exp;
-            experienceList.appendChild(li);
-        });
+                <h1 id="educationn">Education</h1>
+                <div id="educationinfo">
+                    <div id="education"></div>
+                </div>
 
-        const awardsList = document.getElementById('awards');
-        data.awards.forEach(award => {
-            const li = document.createElement('li');
-            li.innerText = award;
-            awardsList.appendChild(li);
-        });
 
-        const referencesList = document.getElementById('references');
-        data.references.forEach(reference => {
-            const li = document.createElement('li');
-            li.innerText = reference;
-            referencesList.appendChild(li);
-        });
-    
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-    });
-</script>
+                <h1 id="experiencee">Experience</h1>
+                <div id="experienceinfo">
+                    <p id="experience"></p>
+                </div>
 
+
+                <h1 id="awardss">Awards</h1>
+                <div id="awardsinfo">
+                    <p id="awards"></p>
+                </div>
+
+
+                <h1 id="referencee">Reference</h1>
+                <div id="referenceinfo">
+                    <p id="references"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+
