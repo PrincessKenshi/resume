@@ -19,13 +19,25 @@
 </head>
 <body>
 
-<h1>Education</h1>
-<h2 id="degree"></h2>
-<p id="year"></p>
-<p id="university"></p>
+<h1>Personal Information</h1>
+<p id="name"></p>
+<p id="birthdate"></p>
+<p id="gender"></p>
+<p id="age"></p>
+<p id="address"></p>
+<p id="phoneNumber"></p>
+<p id="email"></p>
 
 <h1>Skills</h1>
 <ul id="skills"></ul>
+
+
+<h1>Education</h1>
+<h2 id="school"></h2>
+<p id="level"></p>
+<p id="year"></p>
+<p id="address"></p>
+
 
 <h1>Experience</h1>
 <ul id="experience"></ul>
@@ -33,21 +45,19 @@
 <h1>Awards and Achievements</h1>
 <ul id="awards"></ul>
 
-<h1>Contact Information</h1>
-<p id="name"></p>
-<p id="address"></p>
-<p id="phoneNumber"></p>
-<p id="email"></p>
-<p id="birthdate"></p>
-<p id="sex"></p>
+
 
 <script>
     fetch('https://last-try-y2dp.onrender.com/')
     .then(response => response.json())
     .then(data => {
-        document.getElementById('degree').innerText = data.education.degree;
-        document.getElementById('year').innerText = data.education.year;
-        document.getElementById('university').innerText = data.education.university;
+        document.getElementById('name').innerText = data.personalInfo.name;
+        document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
+        document.getElementById('gender').innerText = data.personalInfo.gender;
+        document.getElementById('age').innerText = data.personalInfo.age;
+        document.getElementById('address').innerText = data.personalInfo.address;
+        document.getElementById('phoneNumber').innerText = data.personalInfo.phoneNumber;
+        document.getElementById('email').innerText = data.personalInfo.email;
 
         const skillsList = document.getElementById('skills');
         data.skills.forEach(skill => {
@@ -55,6 +65,11 @@
             li.innerText = skill;
             skillsList.appendChild(li);
         });
+
+        document.getElementById('school').innerText = data.education.school;
+        document.getElementById('level').innerText = data.education.level;
+        document.getElementById('year').innerText = data.education.year;
+        document.getElementById('address').innerText = data.education.address;
 
         const experienceList = document.getElementById('experience');
         data.experience.forEach(exp => {
@@ -70,12 +85,7 @@
             awardsList.appendChild(li);
         });
 
-        document.getElementById('name').innerText = data.personalInfo.name;
-        document.getElementById('address').innerText = data.personalInfo.address;
-        document.getElementById('phoneNumber').innerText = data.personalInfo.phoneNumber;
-        document.getElementById('email').innerText = data.personalInfo.email;
-        document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
-        document.getElementById('sex').innerText = data.personalInfo.sex;
+    
     })
     .catch(error => {
         console.error('Error fetching data:', error);
