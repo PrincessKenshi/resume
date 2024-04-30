@@ -24,7 +24,7 @@
 <p id="birthdate">Birthday:</p>
 <p id="gender">Gender:</p>
 <p id="age">Age:</p>
-<p id="homeaddress">Address:</p>
+<p id="address">Address:</p>
 <p id="phoneNumber">Contact Number:</p>
 <p id="email">Email:</p>
 
@@ -36,7 +36,7 @@
 <h2 id="school"></h2>
 <p id="level"></p>
 <p id="year"></p>
-<p id="address"></p>
+<p id="educationAddress"></p>
 
 
 <h1>Experience</h1>
@@ -46,7 +46,7 @@
 <ul id="awards"></ul>
 
 <h1>Reference</h1>
-<p id="reference"></p>
+<ul id="references"></ul>
 
 
 
@@ -58,7 +58,7 @@
         document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
         document.getElementById('gender').innerText = data.personalInfo.gender;
         document.getElementById('age').innerText = data.personalInfo.age;
-        document.getElementById('homeaddress').innerText = data.personalInfo.address;
+        document.getElementById('address').innerText = data.personalInfo.address;
         document.getElementById('phoneNumber').innerText = data.personalInfo.phoneNumber;
         document.getElementById('email').innerText = data.personalInfo.email;
 
@@ -69,10 +69,10 @@
             skillsList.appendChild(li);
         });
 
-        document.getElementById('school').innerText = data.education.school;
-        document.getElementById('level').innerText = data.education.level;
-        document.getElementById('year').innerText = data.education.year;
-        document.getElementById('address').innerText = data.education.address;
+        document.getElementById('school').innerText = data.education[0].school; // Accessing the first item in the education array
+        document.getElementById('level').innerText = data.education[0].level;
+        document.getElementById('year').innerText = data.education[0].year;
+        document.getElementById('educationAddress').innerText = data.education[0].address;
 
         const experienceList = document.getElementById('experience');
         data.experience.forEach(exp => {
@@ -88,7 +88,12 @@
             awardsList.appendChild(li);
         });
 
-        document.getElementById('reference').innerText = data.personalInfo.reference;
+        const referencesList = document.getElementById('references');
+        data.references.forEach(reference => {
+            const li = document.createElement('li');
+            li.innerText = reference;
+            referencesList.appendChild(li);
+        });
     
     })
     .catch(error => {
