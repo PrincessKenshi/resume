@@ -20,13 +20,13 @@
 <body>
 
 <h1>Personal Information</h1>
-<p id="name"></p>
-<p id="birthdate"></p>
-<p id="gender"></p>
-<p id="age"></p>
-<p id="address"></p>
-<p id="phoneNumber"></p>
-<p id="email"></p>
+<p id="name">Name:</p>
+<p id="birthdate">Birthday:</p>
+<p id="gender">Gender:</p>
+<p id="age">Age:</p>
+<p id="address">Address:</p>
+<p id="phoneNumber">Contact Number:</p>
+<p id="email">Email:</p>
 
 <h1>Skills</h1>
 <ul id="skills"></ul>
@@ -40,10 +40,13 @@
 
 
 <h1>Experience</h1>
-<ul id="experience"></ul>
+<p id="experience"></p>
 
-<h1>Awards and Achievements</h1>
+<h1>Awards</h1>
 <ul id="awards"></ul>
+
+<h1>Reference</h1>
+<p id="reference"></p>
 
 
 
@@ -85,6 +88,7 @@
             awardsList.appendChild(li);
         });
 
+        document.getElementById('reference').innerText = data.personalInfo.reference;
     
     })
     .catch(error => {
