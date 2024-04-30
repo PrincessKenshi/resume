@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Fetch data from Express.js server
-fetch('http://localhost:3000/')
+fetch('https://noderesume.onrender.com/resume')
   .then(response => response.json())
   .then(data => {
     // Populate Personal Information
@@ -30,14 +30,19 @@ fetch('http://localhost:3000/')
     // Populate Skills
     let skillsHTML = '';
     data.Skills.forEach(skill => {
-      skillsHTML += `<p>${skill.SkillName}</p><div class="ps"><div class="skills">${skill.Percentage}</div></div>`;
+      skillsHTML += `<p>${skill.SkillName}</p>
+      <div class="ps">
+      <div class="skills">${skill.Percentage}</div>
+      </div>`;
     });
     document.getElementById('proskils').innerHTML = skillsHTML;
 
     // Populate Education
     let educationHTML = '';
     data.Education.forEach(edu => {
-      educationHTML += `<h2>${edu.School}</h2><h3>${edu.Level} | ${edu.Year}</h3><p>${edu.Address}</p><br>`;
+      educationHTML += `<h2>${edu.School}</h2>
+      <h3>${edu.Level} | ${edu.Year}</h3>
+      <p>${edu.Address}</p><br>`;
     });
     document.getElementById('educationinfo').innerHTML = educationHTML;
 
@@ -50,3 +55,42 @@ fetch('http://localhost:3000/')
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+
+  fetch('https:noderesume.onrender.com/resume')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('degree').innerText = data.education.degree;
+        document.getElementById('year').innerText = data.education.year;
+        document.getElementById('university').innerText = data.education.university;
+
+        const skillsList = document.getElementById('skills');
+        data.skills.forEach(skill => {
+            const li = document.createElement('li');
+            li.innerText = skill;
+            skillsList.appendChild(li);
+        });
+
+        const experienceList = document.getElementById('experience');
+        data.experience.forEach(exp => {
+            const li = document.createElement('li');
+            li.innerText = exp;
+            experienceList.appendChild(li);
+        });
+
+        const awardsList = document.getElementById('awards');
+        data.awards.forEach(award => {
+            const li = document.createElement('li');
+            li.innerText = award;
+            awardsList.appendChild(li);
+        });
+
+        document.getElementById('name').innerText = data.personalInfo.name;
+        document.getElementById('address').innerText = data.personalInfo.address;
+        document.getElementById('phoneNumber').innerText = data.personalInfo.phoneNumber;
+        document.getElementById('email').innerText = data.personalInfo.email;
+        document.getElementById('birthdate').innerText = data.personalInfo.birthdate;
+        document.getElementById('gender').innerText = data.personalInfo.gender;
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
