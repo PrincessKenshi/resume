@@ -15,7 +15,6 @@ fetch('https://noderesume.onrender.com/')
 .then(data => {
     // Display personal information
     document.getElementById('name').innerText = data.personalInfo.name;
-    document.getElementById('fjob').innerText = data.personalInfo.fjob;
     document.getElementById('birthdate').innerText = "Birthday: " + data.personalInfo.birthdate;
     document.getElementById('gender').innerText = "Gender: " + data.personalInfo.gender;
     document.getElementById('age').innerText = "Age: " + data.personalInfo.age;
@@ -23,6 +22,8 @@ fetch('https://noderesume.onrender.com/')
     document.getElementById('phoneNumber').innerText = "Contact Number: " + data.personalInfo.phoneNumber;
     document.getElementById('email').innerText = "Email: " + data.personalInfo.email;
 
+    document.getElementById('fjob').innerText = data.personalInfo.fjob;
+    
     // Display about me
     document.getElementById('aboutme').innerText = data.aboutme;
 
