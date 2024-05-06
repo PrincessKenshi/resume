@@ -22,7 +22,9 @@ fetch('https://noderesume.onrender.com/')
     document.getElementById('phoneNumber').innerText = "Contact Number: " + data.personalInfo.phoneNumber;
     document.getElementById('email').innerText = "Email: " + data.personalInfo.email;
 
-    document.getElementById('fjob').innerText = data.personalInfo.fjob;
+    // Display fjob
+    document.getElementById('fjob').innerText = data.fjob;
+
     
     // Display about me
     document.getElementById('aboutme').innerText = data.aboutme;
@@ -63,13 +65,18 @@ fetch('https://noderesume.onrender.com/')
         awardsList.appendChild(li);
     });
 
-    // Display references
-    const referencesList = document.getElementById('references');
-    data.references.forEach(reference => {
-        const li = document.createElement('li');
-        li.innerText = reference;
-        referencesList.appendChild(li);
-    });
+   // Display referenes
+const referencesContainer = document.getElementById('references');
+data.references.forEach(ref => {
+    const refDiv = document.createElement('div');
+    refDiv.innerHTML = `
+        <h2>${ref.name}</h2>
+        <p>${ref.work}</p>
+        <p>${ref.contactno}</p>
+    `;
+    referencesContainer.appendChild(refDiv); // Corrected from educationContainer to referencesContainer
+});
+
 })
 .catch(error => {
     console.error('Error fetching data:', error);

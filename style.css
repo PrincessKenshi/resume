@@ -127,6 +127,9 @@ ul {
 
 
 .information {
+    position: absolute;
+    left: 43%;
+    top: 12%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -137,16 +140,30 @@ ul {
 }
 
 .information p {
-    flex-basis: calc(50% - 10px);
+    flex-basis: calc(48% - 10px);
     margin: 3px 5px;
     text-align: left;
+
 }
 
 #name {
     margin-top: 70px;
 }
 
+#fjob {
+   position: absolute;
+   top: 8%;
+   left: 43%;
+}
 
+
+.line {
+    position: absolute;
+    border: 1px solid rgb(105, 197, 121);
+    width: 45%;
+    left: 43%;
+    top: 8%;
+}
 #aboutmee {
     color:  rgb(17, 82, 33);
     text-shadow: 3px 4px rgba(255, 254, 183, 0.815);
@@ -305,8 +322,8 @@ ul {
 }
 
 #referenceinfo {
-    text-align: center;
+    text-align: justify;
     box-sizing: border-box;
-    padding-left: 30px;
+    padding-left: 400px;
     padding-right: 30px;
 }
